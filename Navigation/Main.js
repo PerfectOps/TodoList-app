@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList, StyleSheet, View, SafeAreaView } from 'react-native';
+import { FlatList, View, SafeAreaView } from 'react-native';
 import Header from '../Components/Header';
 import ListItem from '../Components/ListItem';
 import Form from '../Components/Form';

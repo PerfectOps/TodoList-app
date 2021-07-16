@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
-import { FlatList, StyleSheet, View, SafeAreaView } from 'react-native';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Header from './Components/Header';
-import ListItem from './Components/ListItem';
-import Form from './Components/Form';
 import Main from './Navigation/Main';
 import Open from './Navigation/Open';
 
