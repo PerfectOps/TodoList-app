@@ -22,19 +22,19 @@ export default function Form({ addTask }) {
 }
 
 const styles = StyleSheet.create({
-    input: {
-        backgroundColor: 'white',
-        borderWidth: 1,
-        borderRadius: 10,
-        padding: 10,
-        marginVertical: 30,
-        marginHorizontal: '20%',
-        width: '60%',  
-    },
-    button: {
-        flexDirection: 'row'
-    },
-    fromComp: {
-        backgroundColor: '#7984fc'
-    }
+        input: {
+            backgroundColor: 'white',
+            borderWidth: 1,
+            borderRadius: 10,
+            padding: 10,
+            marginVertical: 30,
+            marginHorizontal: '20%',
+            width: '60%',  
+        },
+        button: {
+            flexDirection: 'row'
+        },
+        fromComp: {
+            backgroundColor: '#7984fc'
+        }
 });

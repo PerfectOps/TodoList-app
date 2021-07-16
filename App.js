@@ -1,46 +1,22 @@
 import React, { useState } from 'react';
 import { FlatList, StyleSheet, View, SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Header from './Components/Header';
 import ListItem from './Components/ListItem';
 import Form from './Components/Form';
+import Main from './Navigation/Main';
+import Open from './Navigation/Open';
+
+const Stack = createStackNavigator();
 
 export default function App() {
-  const [listOfItems, setListOfItems] = useState([
-  ])
-
-  const addTask = (text) => {
-    setListOfItems((list) => {
-      return [
-        { text: text, key: Math.random().toString(36).substring(7) },
-        ...list
-      ]
-    })
-  }
-
-  const deleteTask = (key) => {
-    setListOfItems((list) => {
-      return list.filter(listOfItems => listOfItems.key != key)
-    })
-  }
-
   return (
-    <View style={styles.listTask}>
-      <View>
-        <Header />
-      </View>
-      <View>
-        <Form addTask={addTask}/>
-      </View>
-      <SafeAreaView>
-        <FlatList data={listOfItems} renderItem={({ item }) => (
-          <ListItem el={item} deleteTask={deleteTask}/>
-        )} />
-      </SafeAreaView>
-      
-    </View>
-  );
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='Open' title='Welcome to To-Do List!' component={Open}/>
+        <Stack.Screen name='Home' component={Main}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
-
-const styles = StyleSheet.create({
-  
-});
